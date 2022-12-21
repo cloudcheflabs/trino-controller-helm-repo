@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  dataroaster-trino-controller:
+  - apiVersion: v2
+    appVersion: v1.0.4
+    created: "2022-12-21T11:57:59.319895373Z"
+    dependencies:
+    - name: dataroasterhelmoperator
+      repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
+      version: v1.1.1
+    - name: dataroastertrinooperator
+      repository: https://cloudcheflabs.github.io/trino-helm-repo/
+      version: v2.1.5
+    description: dataroaster trino controller
+    digest: ae9474e22f52b54a3299258e94ba4bd1c6bb9babc13b42e9fadc2d9ce04cef08
+    name: dataroaster-trino-controller
+    urls:
+    - dataroaster-trino-controller-v1.2.0.tgz
+    version: v1.2.0
+generated: "2022-12-21T11:57:59.31885387Z"
