@@ -1,5 +1,0 @@
-apiVersion: v2
-appVersion: v3.1.1
-description: dataroaster trino operator
-name: dataroastertrinooperator
-version: v2.3.0
