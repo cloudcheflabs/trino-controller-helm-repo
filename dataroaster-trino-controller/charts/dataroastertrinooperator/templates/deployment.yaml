@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trino-operator
+  labels:
+    app: trino-operator
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: trino-operator
+  template:
+    metadata:
+      labels:
+        app: trino-operator
+      annotations:
+      {{- toYaml $.Values.tolerations | nindent 8 }}
+    spec:
+      affinity:
+      {{- toYaml $.Values.affinity | nindent 8 }}
+      tolerations:
+      {{- toYaml $.Values.tolerations | nindent 8 }}
+      nodeSelector:
+      {{- toYaml $.Values.nodeSelector | nindent 8 }}
+      {{- if .Values.priorityClassName }}
+      priorityClassName: {{ .Values.priorityClassName }}
+      {{- end }}
+      hostNetwork: {{ .Values.hostNetwork }}
+      serviceAccountName: {{ .Values.serviceAccount }}
+      dnsPolicy: {{ .Values.dnsPolicy }}
+      containers:
+        - name: trino-operator
+          image: {{ .Values.image }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          resources: 
+          {{- toYaml $.Values.resources | nindent 12 }}
+          command:
+            - "./run-trino-operator.sh"
+          ports:
+            - name: http
+              containerPort: {{ .Values.server.port }}
+              protocol: TCP
+          volumeMounts:
+            - name: trino-operator-volume
+              mountPath: /opt/trino-operator/conf/application.properties
+              subPath: application.properties
+            - name: trino-operator-volume
+              mountPath: /opt/trino-operator/conf/application-prod.yml
+              subPath: application-prod.yml
+      volumes:
+        - name: trino-operator-volume
+          configMap:
+            name: trino-operator

@@ -1,0 +1,21 @@
+namespace: trino-operator
+serviceAccount: trino-operator
+image: cloudcheflabs/trino-operator:v3.1.1
+imagePullPolicy: Always
+replicas: 3
+resources:
+  requests:
+    cpu: 200m
+    memory: 1500Mi
+  limits:
+    cpu: 500m
+    memory: 2500Mi
+priorityClassName: ""
+annotations: null
+affinity: null
+tolerations: null
+nodeSelector: null
+hostNetwork: false
+dnsPolicy: Default
+server:
+    port: 8092
