@@ -3,7 +3,23 @@ entries:
   dataroaster-trino-controller:
   - apiVersion: v2
     appVersion: v1.1.0
-    created: "2023-02-19T12:02:56.987120599Z"
+    created: "2023-03-14T00:20:44.374368257Z"
+    dependencies:
+    - name: dataroasterhelmoperator
+      repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
+      version: v3.0.0
+    - name: dataroastertrinooperator
+      repository: https://cloudcheflabs.github.io/trino-helm-repo/
+      version: v2.3.0
+    description: dataroaster trino controller
+    digest: d1a342d5b57fa4a288911a2bff594786560f182666d0c91ac0bd6cf2ae13a10c
+    name: dataroaster-trino-controller
+    urls:
+    - dataroaster-trino-controller-v1.6.0.tgz
+    version: v1.6.0
+  - apiVersion: v2
+    appVersion: v1.1.0
+    created: "2023-03-14T00:20:44.37355671Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -19,7 +35,7 @@ entries:
     version: v1.5.0
   - apiVersion: v2
     appVersion: v1.1.0
-    created: "2023-02-19T12:02:56.985677576Z"
+    created: "2023-03-14T00:20:44.37203577Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -35,7 +51,7 @@ entries:
     version: v1.4.0
   - apiVersion: v2
     appVersion: v1.0.5
-    created: "2023-02-19T12:02:56.984418111Z"
+    created: "2023-03-14T00:20:44.370832101Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -51,7 +67,7 @@ entries:
     version: v1.3.0
   - apiVersion: v2
     appVersion: v1.0.4
-    created: "2023-02-19T12:02:56.983305694Z"
+    created: "2023-03-14T00:20:44.369658598Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -67,7 +83,7 @@ entries:
     version: v1.2.0
   - apiVersion: v2
     appVersion: v1.0.3
-    created: "2023-02-19T12:02:56.982066548Z"
+    created: "2023-03-14T00:20:44.36843452Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -83,7 +99,7 @@ entries:
     version: v1.1.0
   - apiVersion: v2
     appVersion: v1.0.2
-    created: "2023-02-19T12:02:56.980952167Z"
+    created: "2023-03-14T00:20:44.367190334Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -99,7 +115,7 @@ entries:
     version: v1.0.2
   - apiVersion: v2
     appVersion: v1.0.1
-    created: "2023-02-19T12:02:56.979740103Z"
+    created: "2023-03-14T00:20:44.365706905Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -115,7 +131,7 @@ entries:
     version: v1.0.1
   - apiVersion: v2
     appVersion: v1.0.0
-    created: "2023-02-19T12:02:56.978410875Z"
+    created: "2023-03-14T00:20:44.36350226Z"
     dependencies:
     - name: dataroasterhelmoperator
       repository: https://cloudcheflabs.github.io/helm-operator-helm-repo/
@@ -129,4 +145,4 @@ entries:
     urls:
     - dataroaster-trino-controller-v1.0.0.tgz
     version: v1.0.0
-generated: "2023-02-19T12:02:56.975955466Z"
+generated: "2023-03-14T00:20:44.362040692Z"
